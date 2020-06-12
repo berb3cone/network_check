@@ -1,6 +1,4 @@
 from data_structures.datacenter import Datacenter
-from data_structures.cluster import Cluster
-from data_structures.network_collection import NetworkCollection
 from urllib import request
 import json
 from time import sleep
@@ -39,8 +37,7 @@ def main():
     """
 
     data = get_data(URL)
-    # print(data)
-    # print(type(data))
+
     if not data:
         raise ValueError('No data to process')
 
@@ -49,27 +46,10 @@ def main():
         for key, value in data.items()
     ]
 
-    # verify remove_invalid_clusters() method
     for d in datacenters:
+        # print(d.get_datacenter())
         d.remove_invalid_clusters()
-
-    # generating clusters list
-    clusters = [
-        Cluster(key, value["networks"], value["security_level"])
-        for d in datacenters for key, value in d.cluster_dict.items()
-    ]
-
-    # generating net_col list
-    net_col = [
-        NetworkCollection(key, value)
-        for c in clusters for key, value in c.network_dict.items()
-    ]
-
-    # call remove_invalid_records() method
-    for netw in net_col:
-        netw.remove_invalid_records()
-
-    # pass  # the rest of your logic here
+        # print(d.get_datacenter())
 
 
 if __name__ == '__main__':

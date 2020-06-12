@@ -11,3 +11,6 @@ class Entry:
         self.address = address
         self.available = available
         self.last_used = last_used
+
+    def get_entries(self):
+        return self.address, self.available, self.last_used

@@ -1,3 +1,4 @@
+from data_structures.cluster import Cluster
 import re
 
 
@@ -11,18 +12,27 @@ class Datacenter:
         """
 
         self.name = name
-        self.cluster_dict = cluster_dict
+        self.clusters = [
+            Cluster(key, value["networks"], value["security_level"])
+            for key, value in cluster_dict.items()
+        ]
 
     def remove_invalid_clusters(self):
         """
         Removes invalid objects from the clusters list.
         """
-
         pref = self.name[0:3].upper()
-        for cluster in list(self.cluster_dict):
-            res = re.search("^(%s)-(\d{1,3}$)" % pref, cluster)
+        rem_list = []
+        for cluster in self.clusters:
+            res = re.search("^(%s)-(\d{1,3}$)" % pref, cluster.name)
             if not res:
-                del self.cluster_dict[cluster]
-            #     print("Wrong: {}".format(cluster))
-            # else:
-            #     print("Correct: {}".format(cluster))
+                rem_list.append(cluster)
+        for cluster in rem_list:
+            self.clusters.remove(cluster)
+            # print("Sters: {}".format(cluster.name))
+
+        for cluster in self.clusters:
+            cluster.rem_rec()
+
+    def get_datacenter(self):
+        return self.name, list(cluster.get_cluster() for cluster in self.clusters)

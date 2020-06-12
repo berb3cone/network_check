@@ -1,3 +1,4 @@
+from data_structures.entry import Entry
 import re
 
 
@@ -11,7 +12,10 @@ class NetworkCollection:
         """
 
         self.ipv4_network = ipv4_network
-        self.raw_entry_list = raw_entry_list
+        self.entries = [
+            Entry(val["address"], val["available"], val["last_used"])
+            for val in raw_entry_list
+        ]
 
     def remove_invalid_records(self):
         """
@@ -21,24 +25,24 @@ class NetworkCollection:
         ipv4 = self.ipv4_network.split("/")[0]
         mask = int(self.ipv4_network.split("/")[1])
         bin_ipv4 = ""
+        rem_list = []
         for i in ipv4.split("."):
             bin_ipv4 += format(int(i), "#010b")[2:]
-        for j in list(self.raw_entry_list):
-            c = 1
-            if re.search("^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", j["address"]):
+        for entry in self.entries:
+            if re.search("^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$", entry.address):
                 e_bin_ipv4 = ""
-                for i in j["address"].split("."):
+                for i in entry.address.split("."):
                     if int(i) < 256:
                         e_bin_ipv4 += format(int(i), "#010b")[2:]
                     else:
-                        c = 0
+                        rem_list.append(entry)
                         break
                 if bin_ipv4[:mask] != e_bin_ipv4[:mask]:
-                    c = 0
+                    rem_list.append(entry)
             else:
-                c = 0
-            if not c:
-                self.raw_entry_list.remove(j)
+                rem_list.append(entry)
+        for entry in rem_list:
+            self.entries.remove(entry)
 
     def sort_records(self):
         """
@@ -47,3 +51,6 @@ class NetworkCollection:
         """
 
         self.entries = sorted(self.entries)
+
+    def get_net_col(self):
+        return self.ipv4_network, list(entry.get_entries() for entry in self.entries)
