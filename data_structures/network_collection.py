@@ -50,8 +50,6 @@ class NetworkCollection:
         # by uncommenting the line below, the remaining entries will be sorted ascending by address
         # self.sort_records()
 
-        return self
-
     def sort_records(self):
         """
         Sorts the list of associated entries in ascending order.

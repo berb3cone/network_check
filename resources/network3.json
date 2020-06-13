@@ -1,0 +1,61 @@
+{
+  "192.168.0.0/24": [
+    {
+      "address": "255.255.255.0",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.168.0.288",
+      "available": false,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.168.0.1",
+      "available": false,
+      "last_used": "30/01/20 16:00:00"
+    },
+    {
+      "address": "192.168.0.4",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.168.0.2",
+      "available": false,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.168.0.3",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.168.1.1",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    }
+  ],
+  "10.0.8.0/22": [
+    {
+      "address": "10.0.11.254",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "10.0.8.1",
+      "available": false,
+      "last_used": "30/01/20 16:00:00"
+    },
+    {
+      "address": "10.0.8.0",
+      "available": false,
+      "last_used": "30/01/20 16:00:00"
+    },
+    {
+      "address": "10.0.12.1",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    }
+  ]
+}
