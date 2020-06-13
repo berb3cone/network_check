@@ -29,10 +29,10 @@ class Datacenter:
                 rem_list.append(cluster)
         for cluster in rem_list:
             self.clusters.remove(cluster)
-            # print("Sters: {}".format(cluster.name))
 
-        for cluster in self.clusters:
-            cluster.rem_rec()
+        # by uncommenting the lines below, the entries with wrong address will be removed
+        # for cluster in self.clusters:
+        #     cluster.rem_rec()
 
     def get_datacenter(self):
         return self.name, list(cluster.get_cluster() for cluster in self.clusters)

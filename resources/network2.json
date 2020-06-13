@@ -1,0 +1,136 @@
+{
+  "192.168.0.0/10": [
+    {
+      "address": "....",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "0.0.0.0",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "...",
+      "available": false,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.128.0.0",
+      "available": false,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.128.128.128",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "a.a.a.a",
+      "available": false,
+      "last_used": "30/01/20 16:00:00"
+    },
+    {
+      "address": "193.128.0.0",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.168.0.2/24",
+      "available": false,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.168.0./24",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "192.191.255.255",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "192.191.256.255",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": ".191.255.255",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+		{
+      "address": "_.191.255.255",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    }
+  ],
+  "10.0.8.0/29": [
+    {
+      "address": "10.0.8.6",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.4",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.7",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.5",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.77",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.2",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.0",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.1",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+	{
+      "address": "10.0.8.3",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "10.0.8.8",
+      "available": false,
+      "last_used": "30/01/20 16:00:00"
+    },
+    {
+      "address": "11.0.8.0",
+      "available": false,
+      "last_used": "30/01/20 16:00:00"
+    },
+    {
+      "address": "A.0.8.0",
+      "available": true,
+      "last_used": "30/01/20 17:00:00"
+    },
+    {
+      "address": "10.0.9.0",
+      "available": false,
+      "last_used": "30/01/20 17:00:00"
+    }
+  ]
+}

@@ -46,6 +46,8 @@ def main():
         for key, value in data.items()
     ]
 
+    # by editing datacenter.py (uncommenting lines 34-35) invalid network records will be removed
+    # by editing network_collections.py (uncommenting line 51) remaining entries will be sorted by address
     for d in datacenters:
         # print(d.get_datacenter())
         d.remove_invalid_clusters()

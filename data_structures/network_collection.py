@@ -17,6 +17,9 @@ class NetworkCollection:
             for val in raw_entry_list
         ]
 
+    def __repr__(self):
+        return repr([self.ipv4_network, self.entries])
+
     def remove_invalid_records(self):
         """
         Removes invalid objects from the entries list.
@@ -43,6 +46,11 @@ class NetworkCollection:
                 rem_list.append(entry)
         for entry in rem_list:
             self.entries.remove(entry)
+
+        # by uncommenting the line below, the remaining entries will be sorted ascending by address
+        # self.sort_records()
+
+        return self
 
     def sort_records(self):
         """
