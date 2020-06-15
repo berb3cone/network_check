@@ -1,5 +1,4 @@
 from data_structures.datacenter import Datacenter
-from tests.test_runner import test_runner
 from urllib import request
 import json
 from time import sleep
@@ -53,8 +52,6 @@ def main():
         print(d.get_datacenter())
         d.remove_invalid_clusters()
         print(d.get_datacenter())
-
-    test_runner()
 
 
 if __name__ == '__main__':
